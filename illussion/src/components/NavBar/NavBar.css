@@ -1,0 +1,28 @@
+.nav {
+    display: inline;
+}
+
+.nav__img {
+    width: 20%;
+}
+
+.logo {
+    width: 100px;
+}
+
+.menu__item {
+    margin: 20px;
+    list-style: none;
+}
+
+.menu__item a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.menu__item a:hover {
+    color: #7868E6;
+    transition: all 300ms;
+}

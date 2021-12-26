@@ -1,0 +1,9 @@
+.material-icons {
+    font-size: 34px;
+    color: #000;
+}
+
+.material-icons:hover {
+    color: #7868E6;
+    transition: all 300ms;
+}
