@@ -1,48 +1,43 @@
-// llamada a la api o promesa
-// manejo de estados
-// traer un itemlist 
-// il va a mapear item y devolverlo como lista
 
 import { useState, useEffect } from 'react'
 import ItemList from '../ItemList/ItemList'
-import MockItems from '../../mock/MockItems';
+import './ItemListContainer.css'
 import { useParams } from 'react-router-dom';
+import { getFirestore } from '../../firebase/firebase';
 
 const ItemListContainer = () => {
-
-    // acá va la promesa !
 
     const [items, setItems] = useState([]);
     const [ loading, setLoading ] = useState(true);
     const { catId } = useParams();
     
     useEffect(() => {
-        setLoading(true);
-        const itemPromise = new Promise((res) => {
-            setTimeout(() => {
 
-                const myData =  catId  ? MockItems.filter(item => item.category === catId)
-                : MockItems
+        setLoading(true)
 
-    
-                res(myData);
+        const db = getFirestore();
+        const itemCollection = db.collection('items')
 
-            }, 1000);
-        });
-        itemPromise.then((res) => {
-            setItems(res)
-        })
-        .finally(() => setLoading(false));
-    }, [catId]);
+        setTimeout(() => {
+            itemCollection.get().then(value => {
+                let datos = value.docs.map(e => {
+                    return{...e.data(), id: e.id}
+                })
 
-
-
+                let myData = catId ? datos.filter((item) => item.category === catId) : datos;
+            
+                if(catId === 'all') {
+                    myData = datos
+                }
+                setItems(myData)
+                setLoading(false)
+            
+            })}, 1500)
+        }, [catId])
+        
     return (
-        loading ? <h2>Cargando...</h2> :
-        <>
-            <ItemList items={items}/>
-        </> 
+        loading ? <div className="loader">Loading...</div> : 
+        <ItemList items={items}/>
     )
 }
-
 export default ItemListContainer

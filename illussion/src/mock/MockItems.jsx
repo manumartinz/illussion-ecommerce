@@ -13,7 +13,7 @@ const MockItems = [
         category: 'B', 
         precio: '$4000',
         desc: 'lorem ipsum lorem ipsum lorem ipsum', 
-        imgUrl: '../img/cors-auris.webp'
+        imgUrl: '../img/hyperx-auris1.jpg'
     },
     {
         id: "3", 
@@ -21,7 +21,7 @@ const MockItems = [
         category: 'C', 
         precio: '$3500',
         desc: 'lorem ipsum lorem ipsum lorem ipsum', 
-        imgUrl: '../img/ss-auriculares1.png'
+        imgUrl: '../img/cors-auris.webp'
     },
     {
         id: "4", 
@@ -29,7 +29,7 @@ const MockItems = [
         category: 'A', 
         precio: '$3000',
         desc: 'lorem ipsum lorem ipsum lorem ipsum', 
-        imgUrl: '../img/log-auriculares.png'
+        imgUrl: '../img/log-auriculares2.png'
     },
     {
         id: "5", 
@@ -37,7 +37,7 @@ const MockItems = [
         category: 'B', 
         precio: '$4000',
         desc: 'lorem ipsum lorem ipsum lorem ipsum', 
-        imgUrl: '../img/cors-auris.webp'
+        imgUrl: '../img/hyperx-auris2.jpg'
     },
     {
         id: "6", 
@@ -45,7 +45,7 @@ const MockItems = [
         category: 'C', 
         precio: '$3500',
         desc: 'lorem ipsum lorem ipsum lorem ipsum', 
-        imgUrl: '../img/ss-auriculares1.png'
+        imgUrl: '../img/cors-auris1.webp'
     },
     {
         id: "7", 

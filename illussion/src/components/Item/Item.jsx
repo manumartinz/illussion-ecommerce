@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
 const Item = ({item}) => {
 
     return (
-        <Link to={`/product/${item.id}`}>
+        <Link className='card' to={`/product/${item?.id}`}>
             <div className="producto">
-                <img src={`./img/${item.imgUrl}`} alt=""></img>
+                <img src={item.imgUrl} alt="auriculares"></img>
                 <h3>{item.marca}</h3>
-                <p>{item.precio}</p>
+                <p className="precio">{item.precio}</p>
                 <p>{item.desc}</p>
                 <a id="" href="/">Comprar</a>
             </div>

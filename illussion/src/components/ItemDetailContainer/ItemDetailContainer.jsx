@@ -1,40 +1,32 @@
-import { useParams } from 'react-router-dom'
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
 import { ItemDetail } from '../ItemDetail/ItemDetail'
-import MockItems from '../../mock/MockItems';
-
-
+import './ItemDetailContainer.css'
+import { getFirestore } from '../../firebase/firebase';
+import { useParams } from 'react-router-dom'
 
 export const ItemDetailContainer = () => {
     const [ product, setProduct ] = useState({});
     const [ loading, setLoading ] = useState(true);
     const { itemId } = useParams();
     
-    console.log(itemId)
     
     useEffect(() => {
         setLoading(true);
-        const itemPromise = new Promise((res) => {
-            setTimeout(() => {
-                
-                const myData = MockItems.find((item) => item.id === itemId);
-                console.log(MockItems)
-                
-                console.log(myData);
+        const db = getFirestore();
+        const itemCollection = db.collection('items')
 
-                res(myData);
-
-            }, 1000);
-        });
-        itemPromise.then((res) => {
-            setProduct(res)
-        })
-        .finally(() => setLoading(false));
+        setTimeout(() => {
+            itemCollection.doc(itemId).get().then((doc) => {
+                setProduct({itemId: doc.id, ...doc.data()})
+                })
+                setLoading(false)
+            }, 1500)
     }, [itemId]);
 
-    return loading ? (
-        <h2>Cargando...</h2>
-    ): <ItemDetail {...product}/>
+    return( loading ? <div className="loader">Loading...</div> : 
+    <ItemDetail product= {product}/> )
+
 }
 
 export default ItemDetailContainer

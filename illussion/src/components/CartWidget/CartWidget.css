@@ -1,6 +1,17 @@
 .material-icons {
-    font-size: 34px;
+    font-size: 44px;
+    margin-top: 45px;
+    margin-left: 80px;
     color: #000;
+}
+
+h4 {
+    position: absolute;
+    margin-top: 53px;
+    margin-left: 99px;
+    color: #FFF;
+    font-size: 12px;
+    cursor: pointer;
 }
 
 .material-icons:hover {

@@ -1,18 +1,24 @@
+.card {
+    text-decoration: none;
+    color: #000;
+}
+
 .producto {
-    width: 80%;
-    margin: 30px;
+    width: 300px;
+    height: 480px;
+    margin: 15px;
     border-radius: 5px;
 }
 
 .producto:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(120, 104, 230, 0.2), 0 6px 20px 0 rgba(120, 104, 230, 0.19);
     transition: all 400ms;
 }
 
 .producto h3 {
     margin-top: 5px;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 25px;
+    font-weight: 700;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
@@ -20,12 +26,17 @@
 .producto p {
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: thin;
     margin: 10px;
+    text-align: center;
+}
+
+.precio p {
+    font-weight: 700;
 }
 
 .producto a {
-    margin: 10% 15%;
+    margin: 20px 80px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-weight: bold;
@@ -74,5 +85,5 @@
 .producto img {
     margin-left: 50px;
     margin-top: 20px;
-    width: 180px;
+    width: 200px;
 }
