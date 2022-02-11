@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
         const itemPromise = new Promise((res) => {
             setTimeout(() => {
                 
-                const myData = MockItems.find((item) => item.id = itemId);
+                const myData = MockItems.find((item) => item.id === itemId);
                 console.log(MockItems)
                 
                 console.log(myData);

@@ -1,6 +1,6 @@
 const MockItems = [
     {
-        id: 1, 
+        id: "1", 
         marca: 'Logitech',
         category: 'A', 
         precio: '$3000',
@@ -8,7 +8,7 @@ const MockItems = [
         imgUrl: '../img/log-auriculares.png'
     },
     {
-        id: 2, 
+        id: "2", 
         marca: 'HyperX',
         category: 'B', 
         precio: '$4000',
@@ -16,7 +16,7 @@ const MockItems = [
         imgUrl: '../img/cors-auris.webp'
     },
     {
-        id: 3, 
+        id: "3", 
         marca: 'Corsair',
         category: 'C', 
         precio: '$3500',
@@ -24,7 +24,7 @@ const MockItems = [
         imgUrl: '../img/ss-auriculares1.png'
     },
     {
-        id: 4, 
+        id: "4", 
         marca: 'Logitech',
         category: 'A', 
         precio: '$3000',
@@ -32,7 +32,7 @@ const MockItems = [
         imgUrl: '../img/log-auriculares.png'
     },
     {
-        id: 5, 
+        id: "5", 
         marca: 'HyperX',
         category: 'B', 
         precio: '$4000',
@@ -40,7 +40,7 @@ const MockItems = [
         imgUrl: '../img/cors-auris.webp'
     },
     {
-        id: 6, 
+        id: "6", 
         marca: 'Corsair',
         category: 'C', 
         precio: '$3500',
@@ -48,7 +48,7 @@ const MockItems = [
         imgUrl: '../img/ss-auriculares1.png'
     },
     {
-        id: 7, 
+        id: "7", 
         marca: 'SteelSeries',
         category: 'D', 
         precio: '$3500',
@@ -56,7 +56,7 @@ const MockItems = [
         imgUrl: '../img/ss-auriculares1.png'
     },
     {
-        id: 8, 
+        id: "8", 
         marca: 'SteelSeries',
         category: 'D', 
         precio: '$3500',
