@@ -1,6 +1,7 @@
 <h1>Proyecto final para CoderHouse</h1>
 <h3>Illussion E-Commerce</h3>
 <p>Illussion esta destinado al mercado de periféricos principalmente enfocados en auriculares de alta gama</p>
+<p>(gif dentro de la carpeta)</p>
 </br>
 <h4>Tecnologías trabajadas en el proyecto:</h4>
 <ul>
